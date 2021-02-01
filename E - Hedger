@@ -1,0 +1,79 @@
+Hedger
+Problem Description
+A hedger is an investor who takes steps to reduce the risks of investment by doing appropriate research and analysis of stocks. Assume that you are a hedger.
+
+Now you have been given some parameters based on which you have to analyze and pick the correct stocks. You have been assigned a fund that you have to manage in such a way that it should give maximum returns.
+
+According to your research you have a list of stocks for which you know the corresponding profit percentages that you can earn within a certain horizon. Being a hedger you don't want to put all your eggs in one basket. That's why you have decided the upper limit in terms of quantity that you will buy, for all stocks.
+
+Given number of stocks, the upper limit on quantity, the amount to be invested, the list of stock prices and list of profit percentages, calculate the maximum profit you can make.
+
+Note: All computation should be accurate up to two digits after the decimal point.  
+
+Constraints
+0 <= A <= 10^6
+
+1 <= K <= 100
+
+1 <= N <= 10^4
+
+Input
+First line contains three space separated integers N K A where
+
+N is number of stocks in Market,
+
+K is maximum quantity of any particular stock you can buy and
+
+A is capital amount you have.
+
+Second line contains N space separated decimals denoting the prices of stocks.
+
+Third line contains N space separated decimals denoting the profit percentages corresponding to the index of stock prices.
+
+Output
+Print the maximum profit that can be earned from the given amount, rounded to the nearest integer.
+
+Time Limit
+1
+
+Examples
+Example 1
+
+Input
+
+4 2 100
+
+20 10 30 40
+
+5 10 30 20
+
+Output
+
+26
+
+Explanation
+
+Here, we can select any two stocks from the available stocks to buy. We choose to buy stocks which are priced at 30 and 40 respectively. Before we exhaust our capital, the maximum profit that can be earned is
+
+Profit=2*((30*30)/100) + 1*((40*20)/100) =26
+
+Example 2
+
+Input
+
+5 3 200
+
+90 25.5 15.5 30.8 18.8
+
+5 10 20 5.5 2.5
+
+Output
+
+20
+
+Explanation
+
+Here, we can select any three stocks from the available stocks to buy. We choose to buy stocks which are priced at 25.5, 15.5 and 30.8 respectively. Before we exhaust our capital, the maximum profit that can be earned is
+
+Profit=3*((25.5*10)/100) + 3*((15.5*20)/100) + 2*((30.8*5.5)/100) =20.34 Hence, output is 20.
+

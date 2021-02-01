@@ -1,0 +1,128 @@
+Unlocker 2.0
+Problem Description
+Consider a M * N grid of numbers. This grid represents a locked matrix. You are also given a set S which has K integers. This set S is termed as Unlocking Set.
+
+If S can be discovered in a specific fashion inside the grid then the grid can be unlocked, else it is not possible to unlock the grid.
+
+The k values in the Set S determine the dimension of a sub-matrix. Let's call it Unlocking sub-matrix. Unlocking sub-matrix is square matrix contained entirely inside the larger grid of dimension M * N. Presence of this sub-matrix in the grid determines if the larger grid is unlockable. Your task is to find this unlocking sub-matrix in the larger grid.
+
+The hard part about unlocking is that this Unlocking sub-matrix can be any permutation of the K elements in the set S. The rules that govern the dimensions of the sub-matrix are as follows
+
+It is a square matrix
+
+Each dimension is squareroot of K i.e. Math.sqrt(K)
+
+It is also guaranteed that all values in the unlocking set S have distinct values. Refer example section to understand more about the role of permutations in the whole scheme of things.
+
+Constraints
+0 <= M, N < 250
+
+0 <= K < M*N
+
+Input
+First line contains two space separated integer M and N which is number of rows and number of columns in grid
+
+Next M lines contains N space separated integers which represent M * N grid
+
+Next Line contains an Integer K which is size of set S
+
+Next line contains K space separated integers which set of decoding values
+
+Output
+If this puzzle contains this sub matrix print "Possible" else print "Not Possible".
+
+Time Limit
+3
+
+Examples
+Example 1
+
+Input
+
+6 6
+
+1 2 3 4 5 6
+
+11 12 13 14 15 16
+
+21 22 23 24 25 26
+
+31 32 33 36 35 34
+
+41 42 43 44 45 46
+
+51 52 53 54 55 56
+
+9
+
+56 34 36 55 35 44 45 46 54
+
+Output
+
+Possible
+
+Explanation:
+
+Dimensions of Unlocking sub-matrix will be Math.sqrt(9) which is 3 * 3
+
+We can see that one permutation of this set exist as sub-matrix of size 3 * 3 in larger grid of 6 * 6
+
+1 2 3 4 5 6
+
+11 12 13 14 15 16
+
+21 22 23 24 25 26
+
+31 32 33 36 35 34
+
+41 42 43 44 45 46
+
+51 52 53 54 55 56
+
+So, output will be "Possible"
+
+Example 1
+
+Input
+
+6 6
+
+1 2 3 4 5 6
+
+11 12 13 14 15 16
+
+21 22 23 24 25 26
+
+31 32 33 36 35 34
+
+41 42 43 44 45 46
+
+51 52 53 54 55 56
+
+9
+
+56 34 36 55 35 44 45 43 54
+
+Output
+
+Not Possible
+
+Explanation:
+
+Dimensions of Unlocking sub-matrix will be Math.sqrt(9) which is 3 * 3
+
+We can see that no permutation of 9 values in set S exist as a sub-matrix of size 3 * 3 in this matrix.
+
+1 2 3 4 5 6
+
+11 12 13 14 15 16
+
+21 22 23 24 25 26
+
+31 32 33 36 35 34
+
+41 42 43 44 45 46
+
+51 52 53 54 55 56
+
+So, output will be "Not Possible".
